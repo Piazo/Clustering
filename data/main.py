@@ -13,7 +13,7 @@ from scipy.io import arff
 
 #Dataset valable pour kmeans : 2d-4c.arff avec k=4
 #Dataset valable pour kmeans : blobs.arff avec k=3
-databrut = arff.loadarff(open("./data/xclara.arff", 'r'))
+databrut = arff.loadarff(open("xclara.arff", 'r'))
 data = [[x[0], x[1]] for x in databrut[0]]
 
 # Affichage en 2D
