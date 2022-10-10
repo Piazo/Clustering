@@ -75,9 +75,9 @@ fp = kmedoids.fasterpam(distmatrix, sil.index(max(sil)) +2 )
 iter_kmed = fp.n_iter
 labels_kmed = fp.labels
 
-plt.plot(loss)
-plt.show()
-plt.clf()
+# plt.plot(loss)
+# plt.show()
+# plt.clf()
 print("Loss with fasterPAM:", fp.loss)
 plt.scatter(f0,f1, c=labels_kmed,s=8)
 plt.title("donnees apres clustering kMedoids")
