@@ -36,16 +36,12 @@ def dbscan():
     plt.plot(trie)
     plt.show()
 
-
-
-
-
     max_silhouette = 0
     bestMinSamples = 0
     labels_used = []
     # nous devons commencer à 2 car le silhouette_score prend minimum 2 clusters
         
-    for j in range(0, 15):
+    for j in range(1, 15):
         model = cluster.DBSCAN(eps=0.02, min_samples=j)
         model.fit(data) 
         labels = model.labels_

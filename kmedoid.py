@@ -40,7 +40,7 @@ for k in range(2, 20):
 
 print("Loss with FasterPAM : " , minLoss)
 
-print("nb clusters = ", k, " --- nb iter = ", optiIter)
+print("nb clusters = ", kOpti, " --- nb iter = ", optiIter)
 
 plt.scatter(f0, f1, c=optiLabels, s=8)
 plt.title("Données après clustering kmedoids")
