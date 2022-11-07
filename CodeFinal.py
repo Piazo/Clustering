@@ -244,7 +244,7 @@ def hdbscanMod():
 
 
 if __name__ == "__main__":
-    tabTempsScore = zeros((5,len(allfiles)))
+    tabTempsScore = zeros((5,len(allfiles)), list)
     i = 0
     for filename in allfiles:
         print(filename)
