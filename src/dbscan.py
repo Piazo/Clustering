@@ -8,7 +8,7 @@ from sklearn.metrics import silhouette_score
 from numba import jit, cuda
  
 def dbscan():
-    databrut = arff.loadarff(open("./data/dartboard2.arff", 'r'))
+    databrut = arff.loadarff(open("/home/alaverdo/Bureau/5A/MLNS/Clustering/data/dartboard1.arff", 'r'))
     data = [[x[0], x[1]] for x in databrut[0]]
 
     # Affichage en 2D
@@ -36,19 +36,20 @@ def dbscan():
     plt.plot(trie)
     plt.show()
 
-    max_silhouette = 0
+    max_silhouette = -500
     bestMinSamples = 0
     labels_used = []
     # nous devons commencer à 2 car le silhouette_score prend minimum 2 clusters
         
     for j in range(1, 15):
-        model = cluster.DBSCAN(eps=0.02, min_samples=j)
+        model = cluster.DBSCAN(eps=0.009, min_samples=j)
         model.fit(data) 
         labels = model.labels_
         if((max(labels)+1 > 1 and (max(labels)+1<1000)) and (silhouette_score(data, labels) > max_silhouette)):
             bestMinSamples = j
             max_silhouette = silhouette_score(data, labels)
             labels_used = labels
+            print("CA PASSE")
 
     tps2 = time.time()
 

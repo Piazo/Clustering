@@ -11,7 +11,7 @@ from sklearn.metrics import davies_bouldin_score
 from sklearn.metrics.pairwise import euclidean_distances
 from sklearn.metrics.pairwise import manhattan_distances
 
-databrut = arff.loadarff(open("./data/xclara.arff", 'r'))
+databrut = arff.loadarff(open("/home/alaverdo/Bureau/5A/MLNS/Clustering/data/dartboard1.arff", 'r'))
 data = [[x[0], x[1]] for x in databrut[0]]
 
 # Affichage en 2D
